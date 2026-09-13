@@ -306,7 +306,21 @@
   }
 
   .leftCol {
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
+  }
+
+  .headline {
+    text-align: center;
+  }
+
+  .rightGrid {
+    justify-items: center;
+    text-align: center;
+  }
+
+  .linkCol {
+    align-items: center;
   }
 }
 
@@ -329,11 +343,23 @@
   .headline {
     font-size: 24px;
     line-height: 1.15;
+    text-align: center;
+  }
+
+  .leftCol {
+    align-items: center;
+    text-align: center;
   }
 
   .rightGrid {
     grid-template-columns: 1fr 1fr;
     gap: 24px;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .linkCol {
+    align-items: center;
   }
 
   .bottomBar {
