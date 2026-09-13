@@ -1,0 +1,264 @@
+.cardLinkWrapper,
+.cardButtonWrapper {
+  display: block;
+  text-align: left;
+  width: 290px;
+  flex: 0 0 290px;
+  scroll-snap-align: start;
+  text-decoration: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  transition: transform var(--duration-fast) var(--ease-out);
+}
+
+.cardLinkWrapper:active,
+.cardButtonWrapper:active {
+  transform: scale(0.97);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  height: 100%;
+  transition:
+    transform var(--duration-fast) var(--ease-out),
+    border-color var(--duration-normal) var(--ease-out),
+    box-shadow var(--duration-normal) var(--ease-out);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .cardLinkWrapper:hover .card,
+  .cardButtonWrapper:hover .card {
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+  }
+}
+
+/* Poster Aspect Container */
+.posterContainer {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Tone Gradient Backgrounds */
+.tone_gold {
+  background: linear-gradient(180deg, var(--tone-gold-from) 0%, var(--tone-gold-to) 100%);
+}
+
+.tone_amber {
+  background: linear-gradient(180deg, var(--tone-amber-from) 0%, var(--tone-amber-to) 100%);
+}
+
+.tone_dusk {
+  background: linear-gradient(180deg, var(--tone-dusk-from) 0%, var(--tone-dusk-to) 100%);
+}
+
+.tone_red {
+  background: linear-gradient(180deg, var(--tone-red-from) 0%, var(--tone-red-to) 100%);
+}
+
+.posterImg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--duration-normal) var(--ease-out);
+  z-index: 0;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .cardLinkWrapper:hover .posterImg,
+  .cardButtonWrapper:hover .posterImg {
+    transform: scale(1.05);
+  }
+}
+
+.posterSun {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0) 75%);
+  pointer-events: none;
+  opacity: 0.35;
+  z-index: 1;
+}
+
+.posterGradientLayer {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.5) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.posterHeader {
+  position: relative;
+  z-index: var(--z-base);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  width: 100%;
+}
+
+.posterHeaderLeft {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: nowrap;
+}
+
+.posterLogo {
+  height: 30px;
+  width: auto;
+  max-width: 85px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.85));
+  pointer-events: none;
+  flex-shrink: 0;
+}
+
+/* Date badge */
+.dateBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 7px;
+  background-color: rgba(0, 0, 0, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: var(--radius-sm);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+  backdrop-filter: blur(8px);
+  white-space: nowrap;
+  flex-shrink: 0;
+  line-height: 1.2;
+}
+
+/* Members Only badge */
+.exclusiveBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 7px;
+  background-color: var(--color-brand-red);
+  color: #ffffff;
+  border-radius: var(--radius-sm);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+  white-space: nowrap;
+  flex-shrink: 0;
+  line-height: 1.2;
+}
+
+.posterFooter {
+  position: relative;
+  z-index: var(--z-base);
+}
+
+.cityText {
+  font-size: var(--text-caption);
+  font-weight: 500;
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Solid White Bar matching Moments / Gallery Cards */
+.whiteBar {
+  background-color: #ffffff;
+  height: 64px;
+  min-height: 64px;
+  max-height: 64px;
+  flex: 0 0 64px;
+  margin-top: auto;
+  padding: 0 var(--space-4);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.textGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  text-align: left;
+}
+
+.eventName {
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  font-weight: 700;
+  color: #111111;
+  letter-spacing: -0.015em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.eventMeta {
+  font-size: 11px;
+  font-weight: 600;
+  color: #666666;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.eventYear {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 700;
+  color: #111111;
+  letter-spacing: 0.04em;
+  flex-shrink: 0;
+  padding: 3px 7px;
+  background-color: transparent;
+  border: 1px solid #111111;
+  border-radius: 4px;
+  line-height: 1.2;
+}
+
+.cardPast {
+  opacity: 0.88;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .cardPast:hover {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cardLinkWrapper,
+  .cardButtonWrapper,
+  .card {
+    transition: none !important;
+    transform: none !important;
+  }
+}

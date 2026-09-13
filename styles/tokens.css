@@ -1,0 +1,123 @@
+:root {
+   /* ==========================================================================
+     COLOR TOKENS
+     Sampled directly from assets/sunset.gif palette & warm editorial accents
+     ========================================================================== */
+   --color-void: #010101;
+   --color-surface-base: #080808;
+   --color-surface-card: #121212;
+   --color-surface-elevated: #1a1a1a;
+   --color-surface-translucent: rgba(10, 10, 10, 0.78);
+   --color-surface-glass: rgba(20, 20, 20, 0.65);
+
+   /* Brand Crimson Red Accents (Sampled directly from official Sunset Sessions Logo) */
+   --color-brand-red: #e64d00;
+   --color-brand-red-hover: #ff2222;
+   --color-gold: #e60000;
+   --color-gold-hover: #ff2222;
+   --color-amber: #ff2a2a;
+   --color-dusk: #cc0000;
+   --color-rose: #e60000;
+
+   /* Typography / Foreground Colors */
+   --color-text-primary: #faf0e6;
+   /* Warm linen / off-white */
+   --color-text-secondary: rgba(250, 240, 230, 0.72);
+   --color-text-tertiary: rgba(250, 240, 230, 0.42);
+   --color-text-dim: rgba(250, 240, 230, 0.22);
+   --color-text-inverse: #050505;
+
+   /* Borders & Dividers */
+   --color-border-subtle: rgba(250, 240, 230, 0.08);
+   --color-border-medium: rgba(250, 240, 230, 0.16);
+   --color-border-light: rgba(255, 255, 255, 0.14);
+   --color-border-active: rgba(230, 0, 0, 0.5);
+
+   /* Event Tone Gradients (for event cards / posters) */
+   --tone-gold-from: #e60000;
+   --tone-gold-to: #4d0000;
+   --tone-amber-from: #ff2a2a;
+   --tone-amber-to: #660000;
+   --tone-dusk-from: #cc0000;
+   --tone-dusk-to: #330000;
+   --tone-red-from: #e60000;
+   --tone-red-to: #260000;
+
+   /* ==========================================================================
+     APPLE SAN FRANCISCO TYPOGRAPHY STACK
+     Grounded in apple-design/SKILL.md §15 and Apple Design System
+     ========================================================================== */
+   --font-display: 'Glorify', -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+   --font-body: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+   /* Type Scale */
+   --text-hero: clamp(2.75rem, 7vw, 5.5rem);
+   --text-section: clamp(2rem, 4.5vw, 3.5rem);
+   --text-h2: clamp(1.5rem, 3vw, 2.25rem);
+   --text-h3: 1.25rem;
+   --text-body-lg: 1.125rem;
+   --text-body: 1rem;
+   --text-caption: 0.8125rem;
+   --text-micro: 0.6875rem;
+
+   /* Optical Tracking (Apple HIG) */
+   --tracking-display: -0.035em;
+   --tracking-heading: -0.025em;
+   --tracking-body: -0.01em;
+   --tracking-caps: 0.06em;
+
+   /* Leading (Line Height) */
+   --leading-tight: 1.05;
+   --leading-snug: 1.2;
+   --leading-normal: 1.55;
+   --leading-relaxed: 1.7;
+
+   /* ==========================================================================
+     SPACING SCALE (4px base)
+     ========================================================================== */
+   --space-1: 4px;
+   --space-2: 8px;
+   --space-3: 12px;
+   --space-4: 16px;
+   --space-5: 20px;
+   --space-6: 24px;
+   --space-8: 32px;
+   --space-10: 40px;
+   --space-12: 48px;
+   --space-16: 64px;
+   --space-20: 80px;
+   --space-24: 96px;
+
+   /* ==========================================================================
+     BORDER RADII
+     ========================================================================== */
+   --radius-sm: 6px;
+   --radius-md: 12px;
+   --radius-lg: 20px;
+   --radius-pill: 9999px;
+
+   /* ==========================================================================
+     ANIMATION & EASING TOKENS
+     From animate/SKILL.md and STANDARDS.md
+     ========================================================================== */
+   --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+   --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+   --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
+
+   --duration-fast: 160ms;
+   --duration-normal: 250ms;
+   --duration-slow: 350ms;
+
+   /* ==========================================================================
+     LAYOUT & ELEVATION
+     ========================================================================== */
+   --max-width-site: 1280px;
+   --max-width-content: 1040px;
+   --max-width-narrow: 760px;
+
+   --z-base: 1;
+   --z-overlay: 10;
+   --z-header: 100;
+   --z-modal: 500;
+   --z-toast: 1000;
+}

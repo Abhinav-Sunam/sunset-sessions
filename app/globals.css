@@ -1,0 +1,166 @@
+@import "../styles/tokens.css";
+
+/* ==========================================================================
+   GLORIFY DISPLAY FONT (self-hosted)
+   Served from /public/font/ via the root-relative URLs below
+   ========================================================================== */
+@font-face {
+  font-family: 'Glorify';
+  src: url('/font/Glorify-Black.woff2') format('woff2'),
+       url('/font/Glorify-Black.woff') format('woff'),
+       url('/font/Glorify-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Glorify';
+  src: url('/font/Glorify-ExtraBold.woff2') format('woff2'),
+       url('/font/Glorify-ExtraBold.woff') format('woff'),
+       url('/font/Glorify-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Glorify';
+  src: url('/font/Glorify-Bold.woff2') format('woff2'),
+       url('/font/Glorify-Bold.woff') format('woff'),
+       url('/font/Glorify-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Glorify';
+  src: url('/font/Glorify-SemiBold.woff2') format('woff2'),
+       url('/font/Glorify-SemiBold.woff') format('woff'),
+       url('/font/Glorify-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Glorify';
+  src: url('/font/Glorify-Medium.woff2') format('woff2'),
+       url('/font/Glorify-Medium.woff') format('woff'),
+       url('/font/Glorify-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Glorify';
+  src: url('/font/Glorify-Regular.woff2') format('woff2'),
+       url('/font/Glorify-Regular.woff') format('woff'),
+       url('/font/Glorify-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Glorify';
+  src: url('/font/Glorify-Light.woff2') format('woff2'),
+       url('/font/Glorify-Light.woff') format('woff'),
+       url('/font/Glorify-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Glorify';
+  src: url('/font/Glorify-ExtraLight.woff2') format('woff2'),
+       url('/font/Glorify-ExtraLight.woff') format('woff'),
+       url('/font/Glorify-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ==========================================================================
+   CSS RESET & BASE DEFAULTS
+   ========================================================================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  background-color: var(--color-void);
+  color: var(--color-text-primary);
+  color-scheme: dark;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--color-void);
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  line-height: var(--leading-normal);
+  letter-spacing: var(--tracking-body);
+  color: var(--color-text-primary);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* Accessible focus ring per Apple HIG */
+:focus-visible {
+  outline: 2px solid var(--color-brand-red);
+  outline-offset: 3px;
+}
+
+/* ==========================================================================
+   GLOBAL REDUCED MOTION FOUNDATION
+   Per apple-design/SKILL.md §14 and animate/SKILL.md §7
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
